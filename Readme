@@ -1,0 +1,10 @@
+Created by Joseph Wireman
+Date: August 2022
+
+Project:
+    The purpose of this project is to create a guessing game where the user inputs a number and the software checks if the inserted number is equal to the secret number. The project must calculate the number of times the user guesses.
+
+Additions:
+    In addition to the requirements, I also added replayablility with a "play again" button, created custom animated elements and an animated gradient background. I designed this one to be visually appealing with audio to complement the appearance. 
+
+The reason I believe this project is impressive is because this was one of my first assignments when entering javascript, and was one of the only projects to utilize the slider, animations, and audio. I also learned about objects ahead of schedule to do the animations.

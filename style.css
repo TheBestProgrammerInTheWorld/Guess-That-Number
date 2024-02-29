@@ -1,0 +1,162 @@
+body{
+    overflow: hidden;
+
+    background: linear-gradient(144deg, #df5f5e, #f2b064, #e7ea64, #efb8f5, #f76fd4);
+    background-size: 1000% 2000%;
+
+    -webkit-animation: AnimationName 15s ease infinite;
+    animation: AnimationName 15s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:11% 0%}
+    50%{background-position:90% 100%}
+    100%{background-position:11% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:11% 0%}
+    50%{background-position:90% 100%}
+    100%{background-position:11% 0%}
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 38%}
+    50%{background-position:100% 63%}
+    100%{background-position:0% 38%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 38%}
+    50%{background-position:100% 63%}
+    100%{background-position:0% 38%}
+}
+
+/* MAIN MENU SCREEN */
+
+#buttonStart{
+    display: block;
+    margin: auto;
+    margin-top: 20vw;
+
+    background: none;
+    border: none;
+
+    font-size: 72pt;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    transition: 0.8s;
+}
+#buttonStart:hover{
+    color: white;
+    cursor: pointer;
+}
+
+/* GAME */
+#game{
+    display: block;
+}
+#title{
+    margin-top: 200px;
+    text-align: center;
+
+    font-size: 32pt;
+    font-family: 'Lobster', cursive;
+
+    opacity: 0;
+
+    transition: 1s;
+    transition-delay: 0.4s;
+}
+
+#sliderContainer{
+    width: 100%;
+    margin-top: 600px;
+
+    opacity: 0;
+
+    transition: 0.8s;
+    transition-delay: 0.5s;
+}
+#mySlider{
+    display: block;
+    margin: auto;
+
+    width: 90%;
+    height: 30px;
+
+    border-radius: 30px;
+    border: solid;
+    outline: none;
+
+    -webkit-appearance: none;
+    appearance: none;
+}
+#mySlider::-webkit-slider-thumb{
+    width: 25px;
+    height: 60px;
+
+    border: solid;
+    background: red;
+
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+
+#selectedNum{
+    margin-top: 200px;
+
+    text-align: center;
+    font-size: 50pt;
+    font-family: 'Lobster', cursive;
+
+    opacity: 0;
+
+    transition: 0.8s;
+    transition-delay: 0.8s;
+}
+
+#containerForButton{
+    text-align: center;
+    margin-top: 200px;
+
+    opacity: 0;
+
+    transition: 0.8s;
+    transition-delay: 1s;
+}
+#guessbtn{
+    display: inline;
+
+    width: 150px;
+    height: 75px;
+
+    border: none;
+    border-radius: 15px;
+
+    background: black;
+
+    color: white;
+    font-size: 24pt;
+    font-family: 'Lobster', cursive;
+
+    cursor: pointer;
+}
+#playAgainBtn{
+    display: none;
+
+    width: 150px;
+    height: 75px;
+    
+    border: none;
+    border-radius: 15px;
+    
+    background: black;
+    
+    color: white;
+    font-size: 21pt;
+    font-family: 'Lobster', cursive;
+
+    opacity: 0;
+    
+    transition: 1s;
+}

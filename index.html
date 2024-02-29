@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Javascript file -->
+    <script src="./s&box.js"></script>
+
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Google 'lobster' font kit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body>
+    <main>
+
+        
+        <div id="menuScreen">
+            <button id="buttonStart" onclick="gameStart()">START</button> <!-- Plays the animations and sets a random number into a hidden variable -->
+        </div>
+
+
+        <!-- This container is for the game to be seperate the menu start screen. -->
+        <div id="game"> 
+
+            <!-- This "title" div is animated -->
+            <div id="title"> 
+                <h1>Guess That Number!</h1>
+                <h4 id="scoreCounter" style="display: inline-block;">Attempts: </h4>
+                <h4 id="score" style="display: inline-block;">0</h4> <!-- Displays the number of guesses at 0 at the start. This changes based of # of times the user hits the guess button. -->
+                <div id="attemptResult">...</div> <!-- Tells the user whether their guess was too high or too low. Displays as "..." at the start. -->
+            </div>
+
+            <!-- This "sliderContainer" div is animated -->
+            <div id="sliderContainer"> 
+                <input type="range" min="0" max="100" step="1" value="50" name="mySlider" id="mySlider">
+                <!-- Instead of a textbox I decided to use a slider. 
+                    This makes the application more visually appealing 
+                    and removes the need to adjust for non-numerical inputs. -->
+            </div>
+
+            <!-- This div does not need to be animated as it cannot display anything until the "guess" button appears in the animation. -->
+            <div> 
+                <div id="selectedNum"></div> 
+                <!-- This div is left blank on purpose,
+                    It displays the number the slider set on.
+                    It does so in the s&box.js file. -->
+            </div>
+
+            <div id="containerForButton"> <!-- This div is animated -->
+                <button id="guessbtn" onclick="guessNum()">Guess...</button>
+                <button id="playAgainBtn" onclick="playAgain()">Play Again?</button>
+            </div>
+        </div>
+
+
+        <!-- This code wouldn't work in the s&box.js file so I put it in here. -->
+        <script>
+            const click = new Audio('a-click.mp3');
+
+            let slider = document.getElementById('mySlider'); // Grabs the slider element
+            let output = document.getElementById('selectedNum'); // 
+            output.innerHTML = slider.value;
+
+            slider.oninput = function () {
+                output.innerHTML = this.value;
+
+                // You need to clone the audio to allow overlapping sound.
+                click.cloneNode(true).play()
+            }
+            
+        </script>
+
+    </main>
+</body>
+</html>
